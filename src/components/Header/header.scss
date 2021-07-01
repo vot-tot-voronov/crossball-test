@@ -1,0 +1,163 @@
+.header {
+    background-color: #FAF9F9;
+    box-shadow: 0px .2rem .4rem #E9E9E9;
+
+    &__container {
+        @include respond(big-desktop) {
+            max-width: 240rem;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        display: flex;
+        align-items: center;
+        max-width: 144rem;
+        width: 100%;
+        height: 8rem;
+        padding: 0 4rem;
+        margin-left: auto;
+        margin-right: auto;
+
+
+        @include respond(tab-land) {
+            justify-content: center;
+        }
+    }
+
+    &__logo {
+        max-width: 18.7rem;
+        display: flex;
+        align-items: center;
+        margin-right: 15.8rem;
+
+        @include respond(tab-land) {
+            margin-right: 4rem;
+        }
+
+        &--logo-img {
+            width: 3.2rem;
+            height: 3.2rem;
+            margin-right: 2rem;
+        }
+
+        &--logo-text {
+            width: 13.5rem;
+            height: 1.2rem;
+        }
+    }
+
+    &__nav {
+        max-width: 49.9rem;
+        width: 100%;
+        margin-right: 23.3rem;
+
+        @include respond(tab-land) {
+            margin-right: 4rem;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__li {
+        display: inline-block;
+        font-size: 1.6rem;
+
+        &--btn {
+            @include button-reset;
+        }
+
+        &-arrow {
+            display: flex;
+            align-items: center;
+        }
+
+        &-arrow--img {
+            @include button-reset;
+            @include arrow-button;
+            margin-left: 1.2rem;
+        }
+    }
+
+    &__ball {
+        display: flex;
+        align-items: center;
+        margin-right: 10.6rem;
+
+        @include respond(tab-land) {
+            margin-right: 5rem;
+        }
+
+        &--img {
+            height: 2.4rem;
+            width: 2.4rem;
+            display: inline-block;
+            background-image: url("../../images/Ball_big.png");
+            background-position: center;
+            margin-right: 1.4rem;
+        }
+
+        &--arrow {
+            @include button-reset;
+            @include arrow-button;
+        }
+    }
+
+    &__user {
+        margin-right: 6.8rem;
+
+        @include respond(tab-land) {
+            margin-right: 2rem;
+        }
+
+        &--btn {
+            @include button-reset;
+        }
+
+        &--circle {
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            border: .2rem solid #5A60E7;
+        }
+
+        &--img {
+            width: 3.4rem;
+            height: 3.4rem;
+            background-image: url("../../images/small-ava.png");
+            background-position: center;
+            position: absolute;
+            top: .1rem;
+            left: .1rem;
+        }
+
+    }
+
+    &__cart {
+        &-logo {
+            @include button-reset;
+            position: relative;
+            width: 2.2rem;
+            height: 2.8rem;
+            background-image: url("../../images/back-big.png");
+
+            &--counter {
+                display: flex;
+                color: #fff;
+                font-size: 1.2rem;
+                justify-content: center;
+                align-items: center;
+                width: 1.6rem;
+                height: 1.6rem;
+                background-color: #86E3CE;
+                border-radius: 50%;
+                position: absolute;
+                top: 1.4rem;
+                left: 1.1rem;
+            }
+        }
+    }
+}
