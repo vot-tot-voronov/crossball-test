@@ -18,9 +18,16 @@
         margin-left: auto;
         margin-right: auto;
 
-
         @include respond(tab-land) {
             justify-content: center;
+        }
+
+        @include respond(tab-port) {
+            justify-content: space-between;
+        }
+
+        @include respond(phone) {
+            padding: 0 1rem;
         }
     }
 
@@ -37,22 +44,44 @@
         &--logo-img {
             width: 3.2rem;
             height: 3.2rem;
+            background-image: url("../../images/Logo_big.png");
+            background-position: center;
             margin-right: 2rem;
+
+            @include respond(phone) {
+                width: 2rem;
+                height: 2rem;
+                background-image: url("../../images/logo_small.png");
+                margin-right: 1rem;
+            }
         }
 
         &--logo-text {
             width: 13.5rem;
             height: 1.2rem;
+            background-image: url("../../images/CROSSBaLL_big.png");
+            background-position: center;
+            background-repeat: no-repeat;
+
+            @include respond(phone) {
+                width: 9rem;
+                height: .8rem;
+                background-image: url("../../images/CROSSBaLL_small.png");
+            }
         }
     }
 
     &__nav {
+        margin-right: 23.3rem;
         max-width: 49.9rem;
         width: 100%;
-        margin-right: 23.3rem;
 
         @include respond(tab-land) {
             margin-right: 4rem;
+        }
+
+        @include respond(tab-port) {
+            display: none;
         }
     }
 
@@ -90,6 +119,10 @@
             margin-right: 5rem;
         }
 
+        @include respond(tab-port) {
+            display: none;
+        }
+
         &--img {
             height: 2.4rem;
             width: 2.4rem;
@@ -112,6 +145,10 @@
             margin-right: 2rem;
         }
 
+        @include respond(tab-port) {
+            display: none;
+        }
+
         &--btn {
             @include button-reset;
         }
@@ -127,8 +164,6 @@
         &--img {
             width: 3.4rem;
             height: 3.4rem;
-            background-image: url("../../images/small-ava.png");
-            background-position: center;
             position: absolute;
             top: .1rem;
             left: .1rem;
@@ -137,12 +172,24 @@
     }
 
     &__cart {
+        @include respond(tab-port) {
+            display: flex;
+            align-items: center;
+        }
+
         &-logo {
             @include button-reset;
             position: relative;
             width: 2.2rem;
             height: 2.8rem;
             background-image: url("../../images/back-big.png");
+
+            @include respond(tab-port) {
+                width: 1.8rem;
+                height: 2.3rem;
+                background-image: url("../../images/back_small.png");
+                margin-right: 2.8rem;
+            }
 
             &--counter {
                 display: flex;
@@ -157,6 +204,78 @@
                 position: absolute;
                 top: 1.4rem;
                 left: 1.1rem;
+
+                @include respond(tab-port) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__nav-burger {
+        display: none;
+
+        @include respond(tab-port) {
+            display: block;
+        }
+
+        width: 2.4rem;
+        height: 2.3rem;
+        position: relative;
+    }
+
+    &__burger-btn {
+        cursor: pointer;
+        transition: all 0.2s;
+
+        & span {
+            position: absolute;
+            top: 1rem;
+            width: 2.4rem;
+            height: .3rem;
+            background-color: #5A60E7;
+            transition: all 0.2s;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 2.4rem;
+            height: .3rem;
+            background-color: #5A60E7;
+            transition: all 0.2s;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 1.3rem;
+            height: .3rem;
+            background-color: #5A60E7;
+            transition: all 0.2s;
+        }
+
+        &.active {
+
+
+            & span {
+                display: none;
+
+            }
+
+            &::before {
+                top: 1.3rem;
+                transform: rotate(45deg);
+                transition: all 0.2s;
+            }
+
+            &::after {
+                top: 1.3rem;
+                width: 2.4rem;
+                transform: rotate(135deg);
+                transition: all 0.2s;
             }
         }
     }
