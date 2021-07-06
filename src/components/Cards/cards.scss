@@ -1,0 +1,105 @@
+.cards {
+    display: flex;
+    margin-top: 2rem;
+    padding: 0 4rem;
+
+    &__user {
+        max-width: 29.5rem;
+        width: 100%;
+        height: 18.4rem;
+        border-radius: 1rem;
+        background: linear-gradient(238.37deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
+        padding: 2rem 0 2rem 2rem;
+    }
+
+    &__bio {
+        display: flex;
+    }
+
+    &__img {
+        position: relative;
+        display: inline-block;
+        width: 8rem;
+        height: 8rem;
+        margin-right: 1rem;
+
+        &--circle {
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+
+        }
+    }
+
+    &__data {
+
+        &--box {
+            position: relative;
+            display: inline-block;
+        }
+
+        &--text {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        &--counter {
+            width: 4.2rem;
+            height: 1.6rem;
+            background-color: #5A60E7;
+            border-radius: 1rem;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            right: -4.5rem;
+            font-size: 1.2rem;
+            padding-top: .1rem;
+            padding-left: .65rem;
+
+            &::before {
+                content: "";
+                width: 1.2rem;
+                height: 1.2rem;
+                background-image: url("../../images/long_arrow.png");
+                background-position: center;
+                position: absolute;
+                top: .1rem;
+                left: 2.8rem;
+            }
+        }
+
+        &--name {
+            font-size: 2rem;
+            color: #fff;
+            line-height: 2.2rem;
+        }
+
+    }
+
+    &__edit {
+        margin-top: 5rem;
+
+        &--btn {
+            @include button-reset;
+            font-size: 1.2rem;
+            border-bottom: 1px solid #ACAFF3;
+            height: 1.4rem;
+            color: #ACAFF3;
+            position: relative;
+            margin-left: 1.9rem;
+
+            &::before {
+                content: '';
+                width: 1.4rem;
+                height: 1.4rem;
+                background-image: url("../../images/pencil.png");
+                position: absolute;
+                top: 0;
+                left: -1.9rem;
+            }
+        }
+    }
+}
