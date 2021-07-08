@@ -102,4 +102,266 @@
             }
         }
     }
+
+    &__statistics {
+        display: flex;
+        max-width: 101.5rem;
+        width: 100%;
+        height: 18.4rem;
+        border-radius: 1rem;
+        background: linear-gradient(238.37deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
+        margin-left: 5rem;
+        padding: 0 2rem;
+        overflow: hidden;
+    }
+
+    &__lightnings {
+        width: 27.5rem;
+        margin-top: 2.5rem;
+    }
+
+    &__lightnings-line {
+        display: flex;
+
+        &--first {
+            border-bottom: 2px solid #D6D7F9;
+            padding-bottom: .3rem;
+        }
+
+        &--second {
+            padding-top: 1.5rem;
+        }
+    }
+
+    &__lightning {
+        width: 3.5rem;
+        height: 4rem;
+        background-image: url("../../images/lightning.png");
+        position: relative;
+        margin-right: 1.5rem;
+        @include button-reset;
+
+        &--margin {
+            margin-right: 6rem;
+        }
+
+        &--bgcolor {
+            margin-right: 1rem;
+            background-image: url("../../images/gray_lightning.png");
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &--number {
+            position: absolute;
+            padding: 0 .4rem;
+            height: 1.5rem;
+            background-color: #fff;
+            color: #5A60E7;
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 1rem;
+            top: -6px;
+            right: -5px;
+        }
+
+        &--bottom {
+            margin-right: .5rem;
+        }
+    }
+
+    &__box-statistics {
+        margin-left: 5rem;
+        max-width: 44rem;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    &__toggle {
+        display: flex;
+        border: 0.5px solid #5A60E7;
+        border-radius: .5rem;
+        padding: .5rem;
+    }
+
+    &__button {
+        @include button-reset;
+        background-color: transparent;
+        width: 21rem;
+        width: 100%;
+        height: 3rem;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 1.6rem;
+        color: #ACAFF3;
+
+        &--active {
+            background-color: #5A60E7;
+            color: #fff;
+        }
+    }
+
+    &__games {
+        display: flex;
+        margin-top: 2rem;
+    }
+
+    &__game {
+        width: 9.5rem;
+        height: 7.5rem;
+        border-radius: .5rem;
+        background: linear-gradient(238.37deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
+        padding: 1rem;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        &--title {
+            font-size: 1.6rem;
+            color: #FAF9F9;
+        }
+
+        &--number {
+            font-size: 3rem;
+            color: #FF795B;
+            text-align: right;
+            margin-top: .5rem;
+        }
+    }
+
+    &__share-box {
+        margin-top: 1rem;
+        margin-left: 3rem;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__share {
+        &--title {
+            color: #ACAFF3;
+            font-size: 1.2rem;
+            margin-bottom: .75rem;
+        }
+
+        &-btn {
+            @include button-reset;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+
+            &--facebook {
+                background-image: url("../../images/facebook.png");
+            }
+
+            &--vk {
+                background-image: url("../../images/vk.png");
+            }
+
+            &--attach {
+                background-image: url("../../images/attach.png");
+            }
+        }
+    }
+
+    &__crosses {
+        padding-left: 1.6rem;
+        margin-top: 2.45rem;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    &__cross {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 3rem;
+        position: relative;
+
+        &--small {
+            &::before {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 1px;
+                background-color: #5A60E7;
+                transform: rotate(45deg);
+                top: 14px;
+                left: -6px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 1px;
+                background-color: #5A60E7;
+                transform: rotate(135deg);
+                top: 14px;
+                left: -6px;
+            }
+        }
+
+        &--middle {
+            &::before {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 2px;
+                background-color: #5A60E7;
+                transform: rotate(45deg);
+                top: 14px;
+                left: -6px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 2px;
+                background-color: #5A60E7;
+                transform: rotate(135deg);
+                top: 14px;
+                left: -6px;
+            }
+        }
+
+        &--big {
+            margin-right: 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 3px;
+                background-color: #5A60E7;
+                transform: rotate(45deg);
+                top: 14px;
+                left: -6px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 3px;
+                background-color: #5A60E7;
+                transform: rotate(135deg);
+                top: 14px;
+                left: -6px;
+            }
+        }
+
+        &--alone {
+            margin-left: 3rem;
+        }
+    }
 }
